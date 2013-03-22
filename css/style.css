@@ -1,2 +1,19 @@
-.home{color:#5b83ad}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+body {
+  font-family: Arial sans-serif;
+  font-size: 14px;
+}
+#wrapper {
+  margin: 0 auto;
+  width: 320px;
+}
+#grid {
+  height: 320px;
+  overflow: hidden;
+}
+#grid .cell {
+  float: left;
+  width: 30px;
+  height: 30px;
+  color: #5b83ad;
+  border: 1px solid #ffffff;
+}

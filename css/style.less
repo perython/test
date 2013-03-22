@@ -1,5 +1,29 @@
-@nice-blue: #5B83AD;
+@field-height: 320px;
+@field-width: 320px;
 
-.home {
-  color: @nice-blue;
+@field-cell-size: 30px;
+
+@nice-blue: #5B83AD;
+@grid-border-color: #fff;
+
+body {
+  font-family: Arial sans-serif;
+  font-size: 14px;
 }
+
+#wrapper {
+  margin: 0 auto;
+  width: @field-width;
+
+}
+  #grid {
+    height: @field-height;
+    overflow: hidden;
+  }
+    #grid .cell {
+      float: left;
+      width: @field-cell-size;
+      height: @field-cell-size;
+      color: @nice-blue;
+      border: 1px solid @grid-border-color;
+    }
