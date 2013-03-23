@@ -11,9 +11,13 @@ body {
   overflow: hidden;
 }
 #grid .cell {
-  float: left;
   width: 30px;
   height: 30px;
+  float: left;
   color: #5b83ad;
   border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+#grid .chosen {
+  border-radius: 15px;
 }

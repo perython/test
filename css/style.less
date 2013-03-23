@@ -6,24 +6,12 @@
 @nice-blue: #5B83AD;
 @grid-border-color: #fff;
 
-body {
-  font-family: Arial sans-serif;
-  font-size: 14px;
-}
+body { font-family: Arial sans-serif; font-size: 14px; }
 
-#wrapper {
-  margin: 0 auto;
-  width: @field-width;
+#wrapper { margin: 0 auto; width: @field-width; }
+  
+  #grid {height: @field-height; overflow: hidden;}
 
-}
-  #grid {
-    height: @field-height;
-    overflow: hidden;
-  }
-    #grid .cell {
-      float: left;
-      width: @field-cell-size;
-      height: @field-cell-size;
-      color: @nice-blue;
-      border: 1px solid @grid-border-color;
-    }
+    #grid .cell {width: @field-cell-size;  height: @field-cell-size; float: left; color: @nice-blue; border: 1px solid @grid-border-color; border-radius: 5px;}
+    #grid .chosen {border-radius: 15px;}
+    
