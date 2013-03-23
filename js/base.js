@@ -1,4 +1,5 @@
 function get_random_color() {
+  // returns random color in hex format with # at the beginning
   var letters = '0123456789ABCDEF'.split('');
   var color = '#';
   for (var i = 0; i < 6; i++ ) {
@@ -8,11 +9,14 @@ function get_random_color() {
 }
 
 function shuffle(o){
-    for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
+  // shuffles array
+  for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
 };
 
 $(function(){
+
+  // creates game data: pairs of random colors elements
   var cell_pairs_num = 25;
   var s = '';
   var colors = new Array();
@@ -26,6 +30,7 @@ $(function(){
   }
   shuffle(colors);
 
+  // creates game field
   $('#grid').append(s).find('.cell').each(function(index, element){
   	$(this).css('background', colors[index])
   });
@@ -33,19 +38,41 @@ $(function(){
   var clicked = false;
   var first;
   $('#grid').click(function(e){
-  	if (clicked) {
-      compare(first, $(e.target));
-  	} else {
-  	  clicked = true;
-  	  first = $(e.target);
-  	  first.addClass('chosen');
-  	}
+  	if (!$(e.target).hasClass('chosen')) {
+	  if (clicked) {
+	    $(e.target).addClass('chosen');  
+
+	    setTimeout(function(){
+	      // compares two selected elements of game field
+	      var second = $(e.target);
+  		  var equal = first.css('background') == second.css('background');
+  	
+  		  if (equal) {
+  	  		first.css('background', '#fff');
+  	  		second.css('background', '#fff');
+  	  	    $('#info .points').text(parseInt($('#info .points').text()) + 1);
+  		  }
+  		  clicked = false;
+  		  first.removeClass('chosen');
+  		  second.removeClass('chosen');
+	    }
+	    //compare(first, $(e.target))
+	    , 200);
+
+	  } else {
+	    clicked = true;
+	    first = $(e.target);
+	    first.addClass('chosen');
+	  }
+	}
   })
 
+  /*
   function compare(first, second) {
-  	var equal = false;
-  	if (first.css('background') == second.css('background')) equal = true;
-  	second.addClass('chosen');
+  	// compares two selected elements of game field
+  	console.log('compare runned!');
+  	var equal = first.css('background') == second.css('background');
+  	
   	if (equal) {
   	  first.css('background', '#fff');
   	  second.css('background', '#fff');
@@ -55,6 +82,7 @@ $(function(){
   	first.removeClass('chosen');
   	second.removeClass('chosen');
   }
+  //*/
   /*
   $('.cell').mouseenter(function(){
   	$(this).css('background', get_random_color());

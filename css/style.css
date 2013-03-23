@@ -1,13 +1,13 @@
 body {
   font-family: Arial sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 #wrapper {
   margin: 0 auto;
   width: 320px;
 }
 #grid {
-  height: 320px;
+  height: 160px;
   overflow: hidden;
 }
 #grid .cell {
@@ -20,4 +20,8 @@ body {
 }
 #grid .chosen {
   border-radius: 15px;
+}
+#info {
+  margin-top: 10px;
+  font-size: 50px;
 }
