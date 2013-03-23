@@ -24,4 +24,8 @@ body {
 #info {
   margin-top: 10px;
   font-size: 50px;
+  overflow: hidden;
+}
+#info .timer {
+  float: right;
 }

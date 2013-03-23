@@ -14,6 +14,24 @@ function shuffle(o){
   return o;
 };
 
+function timer_tick() {
+  timer -= 1;
+  update_timer();
+  if (timer <= 0) {
+    gameover = true;
+    alert('Time is out. Game over.');
+  } else {
+    setTimeout("timer_tick()", 1000);
+  }
+}
+
+function update_timer() {
+  $('#info .timer').text(timer);
+}
+
+var timer = 5;
+var gameover = false;
+
 $(function(){
 
   // creates game data: pairs of random colors elements
@@ -34,7 +52,11 @@ $(function(){
   $('#grid').append(s).find('.cell').each(function(index, element){
   	$(this).css('background', colors[index])
   });
-  
+
+  // set timer
+  update_timer();
+  window.setTimeout("timer_tick()", 1000);
+
   var clicked = false;
   var first;
   $('#grid').click(function(e){
