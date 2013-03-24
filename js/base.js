@@ -22,7 +22,7 @@ function timer_tick() {
     alert('Time is out. Game over.');
     $('#grid').unbind('click');
     $('#info .reload').show();
-  } else {
+  } else if (!gameover) {
     setTimeout("timer_tick()", 1000);
   }
 }
@@ -90,7 +90,10 @@ $(function(){
   	  		  cell_pairs_num -= 1;
   	  	      $('#info .points').text(points);
   	  	      if (cell_pairs_num <= 0) {
+                gameover = true;
   	  	      	alert('You win. Game over.');
+                $('#grid').unbind('click');
+                $('#info .reload').show();
   	  	      }
   		    }
   		    clicked = false;
