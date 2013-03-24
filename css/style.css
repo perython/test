@@ -29,3 +29,8 @@ body {
 #info .timer {
   float: right;
 }
+#info .reload {
+  display: none;
+  padding: 5px;
+  clear: both;
+}
