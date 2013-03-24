@@ -42,12 +42,12 @@ $(function(){
   var colors;
   
   function reload() {
-  	cell_pairs_num = 25;
-  	timer = 60;
-  	points = 0;
-  	gameover = false;
-  	s = '';
-  	colors = new Array();
+    cell_pairs_num = 25;
+    timer          = 60;
+    points         = 0;
+    gameover       = false;
+    s              = '';
+    colors         = new Array();
 
   	// creates game data: pairs of random colors elements
     for (var i=0; i<cell_pairs_num*2; i++) {
@@ -90,7 +90,7 @@ $(function(){
   	  		  cell_pairs_num -= 1;
   	  	      $('#info .points').text(points);
   	  	      if (cell_pairs_num <= 0) {
-
+  	  	      	alert('You win. Game over.');
   	  	      }
   		    }
   		    clicked = false;
