@@ -74,7 +74,7 @@ function init() {
 
   // creates game field
   $('#grid').empty().append(s).find('.cell').each(function(index, element){
-    $(this).css('background', colors[index])
+    $(this).css('background-color', colors[index])
   });
   var img_number = Math.floor((Math.random()*3)+1);
   $('#grid').css('background', 'url(img/'+img_number+'.jpg)');
@@ -95,8 +95,11 @@ function init() {
         setTimeout(function(){
           // compares two selected elements of game field
           var second = $(e.target);
-          var equal = first.css('background') == second.css('background');
+          var equal = first.css('background-color') == second.css('background-color');
     
+          console.log(first.css('background-color'));
+          console.log(second.css('background-color'));
+
           if (equal) {
             first.addClass('out').css('background', 'transparent');
             second.addClass('out').css('background', 'transparent');
