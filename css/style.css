@@ -1,30 +1,40 @@
 body {
-  font-family: Arial sans-serif;
+  font-family: "Courier New", monospace;
   font-size: 16px;
+  font-weight: bold;
 }
 #wrapper {
   margin: 0 auto;
-  width: 320px;
+  width: 322px;
+  padding: 10px;
+  border-radius: 10px;
+  background: lightblue;
 }
 #grid {
   height: 160px;
   overflow: hidden;
+  background: url(../img/1.jpg);
+  border-radius: 5px;
+  padding: 1px;
 }
 #grid .cell {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   float: left;
   color: #5b83ad;
   border: 1px solid #ffffff;
   border-radius: 5px;
+  border: 1px solid lightblue;
+  margin: 1px;
 }
 #grid .chosen {
   border-radius: 15px;
 }
 #info {
   margin-top: 10px;
-  font-size: 50px;
+  font-size: 30px;
   overflow: hidden;
+  color: red;
 }
 #info .timer {
   float: right;

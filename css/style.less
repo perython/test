@@ -1,21 +1,21 @@
 @field-height: 160px;
-@field-width: 320px;
+@field-width: 322px;
 
-@field-cell-size: 30px;
+@field-cell-size: 28px;
 
 @nice-blue: #5B83AD;
 @grid-border-color: #fff;
 
-body { font-family: Arial sans-serif; font-size: 16px; }
+body { font-family: "Courier New", monospace; font-size: 16px; font-weight: bold;}
 
-#wrapper { margin: 0 auto; width: @field-width; }
+#wrapper { margin: 0 auto; width: @field-width; padding: 10px; border-radius: 10px; background: lightblue; }
   
-  #grid {height: @field-height; overflow: hidden;}
+  #grid {height: @field-height; overflow: hidden; background: url(../img/1.jpg); border-radius: 5px; padding: 1px;}
 
-    #grid .cell {width: @field-cell-size;  height: @field-cell-size; float: left; color: @nice-blue; border: 1px solid @grid-border-color; border-radius: 5px;}
+    #grid .cell {width: @field-cell-size;  height: @field-cell-size; float: left; color: @nice-blue; border: 1px solid @grid-border-color; border-radius: 5px; border: 1px solid lightblue; margin: 1px; }
     #grid .chosen {border-radius: 15px;}
   
-  #info {margin-top: 10px; font-size: 50px; overflow: hidden;}
+  #info {margin-top: 10px; font-size: 30px; overflow: hidden; color: red;}
 
     #info .timer {float: right;}
     #info .reload {display: none; padding: 5px; clear: both;}
