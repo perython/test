@@ -24,11 +24,14 @@ body {
   color: #5b83ad;
   border: 1px solid #ffffff;
   border-radius: 5px;
-  border: 1px solid lightblue;
+  border: 1px solid lightgray;
   margin: 1px;
 }
 #grid .chosen {
   border-radius: 15px;
+}
+#grid .out {
+  border-color: transparent;
 }
 #info {
   margin-top: 10px;

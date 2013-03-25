@@ -76,6 +76,8 @@ function init() {
   $('#grid').empty().append(s).find('.cell').each(function(index, element){
     $(this).css('background', colors[index])
   });
+  var img_number = Math.floor((Math.random()*3)+1);
+  $('#grid').css('background', 'url(img/'+img_number+'.jpg)');
 
   // set timer
   update_timer();
@@ -96,8 +98,8 @@ function init() {
           var equal = first.css('background') == second.css('background');
     
           if (equal) {
-            first.addClass('out').css('background', '#fff');
-            second.addClass('out').css('background', '#fff');
+            first.addClass('out').css('background', 'transparent');
+            second.addClass('out').css('background', 'transparent');
             points += 1;
             cell_pairs_num -= 1;
             $('#info .points').text(points);
