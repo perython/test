@@ -1,6 +1,6 @@
-test
+Tiny Pairs Game
 ====
 
-very tiny pair game
+Very small pairs game.
 
-test repository for learning github features
+*test repository for learning github features
