@@ -1,3 +1,5 @@
+/*** initialization ***/
+/*** main ***/
 body {
   font-family: "Courier New", monospace;
   font-size: 16px;
@@ -10,14 +12,14 @@ body {
   border-radius: 10px;
   background: lightblue;
 }
-#grid {
+#wrapper #grid {
   height: 160px;
   overflow: hidden;
   background: url(../img/1.jpg);
   border-radius: 5px;
   padding: 1px;
 }
-#grid .cell {
+#wrapper #grid .cell {
   width: 28px;
   height: 28px;
   float: left;
@@ -27,22 +29,22 @@ body {
   border: 1px solid lightgray;
   margin: 1px;
 }
-#grid .chosen {
+#wrapper #grid .chosen {
   border-radius: 15px;
 }
-#grid .out {
+#wrapper #grid .out {
   border-color: transparent;
 }
-#info {
+#wrapper #info {
   margin-top: 10px;
   font-size: 30px;
   overflow: hidden;
   color: red;
 }
-#info .timer {
+#wrapper #info .timer {
   float: right;
 }
-#info .reload {
+#wrapper #info .reload {
   display: none;
   padding: 5px;
   clear: both;
