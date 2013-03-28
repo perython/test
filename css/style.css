@@ -29,10 +29,10 @@ body {
   border: 1px solid lightgray;
   margin: 1px;
 }
-#wrapper #grid .chosen {
+#wrapper #grid .cell.chosen {
   border-radius: 15px;
 }
-#wrapper #grid .out {
+#wrapper #grid .cell.out {
   border-color: transparent;
 }
 #wrapper #info {

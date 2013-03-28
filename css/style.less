@@ -18,9 +18,10 @@ body { font-family: "Courier New", monospace; font-size: 16px; font-weight: bold
   
   #grid { height: @field-height; overflow: hidden; background: url(../img/1.jpg); .border-radius(5px); padding: 1px;
 
-    .cell { width: @field-cell-size;  height: @field-cell-size; float: left; color: @nice-blue; border: 1px solid @grid-border-color; .border-radius(5px); border: 1px solid lightgray; margin: 1px; }
-    .chosen { .border-radius(15px); }
-    .out { border-color: transparent; }
+    .cell { width: @field-cell-size;  height: @field-cell-size; float: left; color: @nice-blue; border: 1px solid @grid-border-color; .border-radius(5px); border: 1px solid lightgray; margin: 1px; 
+      &.chosen { .border-radius(15px); }
+      &.out { border-color: transparent; }
+    }
 
   }
   
