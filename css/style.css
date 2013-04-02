@@ -10,6 +10,8 @@ body {
   width: 322px;
   padding: 10px;
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   background: lightblue;
 }
 #wrapper #grid {
@@ -17,6 +19,8 @@ body {
   overflow: hidden;
   background: url(../img/1.jpg);
   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   padding: 1px;
 }
 #wrapper #grid .cell {
@@ -26,11 +30,15 @@ body {
   color: #5b83ad;
   border: 1px solid #ffffff;
   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border: 1px solid lightgray;
   margin: 1px;
 }
 #wrapper #grid .cell.chosen {
   border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
 }
 #wrapper #grid .cell.out {
   border-color: transparent;
