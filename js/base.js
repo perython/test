@@ -96,9 +96,6 @@ function init() {
           // compares two selected elements of game field
           var second = $(e.target);
           var equal = first.css('background-color') == second.css('background-color');
-    
-          console.log(first.css('background-color'));
-          console.log(second.css('background-color'));
 
           if (equal) {
             first.addClass('out').css('background', 'transparent');
